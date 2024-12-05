@@ -1,0 +1,35 @@
+body {
+  font-family: Inter;
+}
+
+#text2 {
+  animation: fade-up 1s;
+}
+
+#video-container {
+  animation: fade-down 2s;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}

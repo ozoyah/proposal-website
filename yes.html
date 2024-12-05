@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <link rel="stylesheet" href="./yes.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              padding: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-r from-[#1f0327] to-[#9055a1]">
+    <audio autoplay loop>
+      <source src="./assets/Asake-My-Heart.mp3" type="audio/mp3" />
+    </audio>
+    <div
+      class="container m-auto flex flex-col items-center justify-center m-auto p-24"
+    >
+      <p id="text2" class="text-5xl text-white mb-6 font-bold">
+        Hurray a girlfriend
+      </p>
+      <div id="video-container" class="h-[200px] w-[800px]">
+        <video autoplay muted loop src="./assets/wv.mp4"></video>
+      </div>
+
+      <!-- <script src="script.js"></script> -->
+    </div>
+  </body>
+</html>

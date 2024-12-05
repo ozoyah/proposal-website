@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              padding: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#1f0327]">
+    <audio autoplay loop>
+      <source src="./assets/Asake-My-Heart.mp3" type="audio/mp3" />
+    </audio>
+    <div
+      id="main-div"
+      class="container m-auto flex flex-col items-center justify-center m-auto p-24 space-y-10"
+    >
+      <div class="mb-8">
+        <h1 id="text" class="text-5xl text-white font-bold">
+          Will you be my Babe?
+        </h1>
+      </div>
+      <div class="flex mt">
+        <div class="heart"></div>
+      </div>
+      <div id="button-container" class="flex mt-28 gap-4">
+        <button
+          class="bg-black text-white right-[53%] w-[100px] px-5 py-3 rounded-xl font-bold absolute"
+        >
+          <a href="./yes.html">YES</a>
+        </button>
+        <button
+          id="moving-button"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+          class="bg-black text-white w-[100px] px-5 py-3 rounded-xl font-bold absolute"
+        >
+          <a href="#">No</a>
+        </button>
+        <script>
+          function moveButton() {
+            var x =
+              Math.random() *
+                (window.innerWidth -
+                  document.getElementById("moving-button").offsetWidth) -
+              85;
+            var y =
+              Math.random() *
+                (window.innerHeight -
+                  document.getElementById("moving-button").offsetHeight) -
+              48;
+            document.getElementById("moving-button").style.left = `${x}px`;
+            document.getElementById("moving-button").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
